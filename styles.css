@@ -1,0 +1,521 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.tagline {
+    font-size: 14px;
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background: white;
+    color: #667eea;
+}
+
+.home-content {
+    flex: 1;
+    padding: 80px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section {
+    margin-bottom: 60px;
+}
+
+.hero-section h2 {
+    font-size: 42px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hero-section p {
+    font-size: 18px;
+    color: #666;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: #f0f0f0;
+    color: #333;
+    border: 2px solid #667eea;
+}
+
+.btn-secondary:hover {
+    background: #667eea;
+    color: white;
+}
+
+.btn-icon {
+    font-size: 20px;
+}
+
+.form-container {
+    flex: 1;
+    padding: 40px;
+    width: 100%;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+.tabs-container {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    background: #f5f5f5;
+    border-bottom: 2px solid #e0e0e0;
+    gap: 5px;
+    padding: 10px;
+}
+
+.tab-btn {
+    padding: 10px 15px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+}
+
+.form-content {
+    display: none;
+    padding: 30px;
+    background: #f9f9f9;
+}
+
+.form-content.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.form-content .btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.display-container {
+    flex: 1;
+    padding: 40px;
+}
+
+.display-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.display-header h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.display-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.students-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.students-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.students-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.students-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    word-break: break-word;
+}
+
+.students-table tbody tr:hover {
+    background: #f9f9f9;
+}
+
+.students-table tbody tr:nth-child(even) {
+    background: #f5f5f5;
+}
+
+.no-data {
+    text-align: center;
+    padding: 40px;
+    background: #f9f9f9;
+    border-radius: 12px;
+}
+
+.no-data p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.display-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.display-actions .btn {
+    min-width: 150px;
+}
+
+.message-container {
+    flex: 1;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-message,
+.error-message {
+    text-align: center;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.success-message {
+    background: #d4edda;
+    border: 2px solid #28a745;
+    color: #155724;
+}
+
+.error-message {
+    background: #f8d7da;
+    border: 2px solid #dc3545;
+    color: #721c24;
+}
+
+.message-icon {
+    font-size: 48px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.success-message h2,
+.error-message h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.success-message p,
+.error-message p {
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.message-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.message-actions .btn {
+    min-width: 150px;
+}
+
+footer {
+    background: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    border-top: 1px solid #e0e0e0;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .home-content {
+        padding: 40px 20px;
+    }
+
+    .hero-section h2 {
+        font-size: 28px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .form-content {
+        padding: 20px;
+    }
+
+    .tabs {
+        gap: 3px;
+        padding: 5px;
+    }
+
+    .tab-btn {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .display-container {
+        padding: 20px;
+    }
+
+    .students-table th,
+    .students-table td {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .form-content .btn {
+        width: 100%;
+    }
+
+    .display-actions {
+        flex-direction: column;
+    }
+
+    .message-actions {
+        flex-direction: column;
+    }
+
+    .message-actions .btn,
+    .display-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        border-radius: 0;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .navbar {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .home-content {
+        padding: 30px 20px;
+    }
+
+    .hero-section h2 {
+        font-size: 22px;
+    }
+
+    .hero-section p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .message-container {
+        padding: 20px;
+    }
+}
